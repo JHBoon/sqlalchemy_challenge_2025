@@ -13,7 +13,6 @@ from flask import Flask, jsonify
 # Database Setup
 #################################################
 
-
 # reflect an existing database into a new model
 engine = create_engine("sqlite:///Resources/hawaii.sqlite")
 
@@ -34,11 +33,9 @@ session = Session(engine)
 
 app = Flask(__name__)
 
-
 #################################################
 # Flask Routes
 #################################################
-
 
 @app.route("/")
 def welcome():
@@ -46,10 +43,10 @@ def welcome():
         f"This is the Hawaii Climate Analysis API - ALOHA!<br/>"
         f"Available routes: <br/>"
         f"/api/v1.0/precipitation<br/>"
-        f"api/v1.0/stations<br/>"
-        f"api/v1.0/tobs<br/>"
-        f"api/v1.0/temp/start<br/>"
-        f"api/v1.0/temp/start/end<br/>"
+        f"/api/v1.0/stations<br/>"
+        f"/api/v1.0/tobs<br/>"
+        f"/api/v1.0/temp/start<br/>"
+        f"/api/v1.0/temp/start/end<br/>"
         f"<p>'start' and 'end' date should be in the format MMDDYYYY.</p>"  
     )        
 
